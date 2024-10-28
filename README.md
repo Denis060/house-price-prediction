@@ -5,7 +5,7 @@ This project aims to predict house prices using various features of the property
 
 ## Files Included
 - `house_price_prediction.py`: The main script for data cleaning, analysis, and model training.
-- `data_assignment2.csv`: The dataset used in the analysis (if allowed to share).
+- `data_assignment2.csv`: The dataset used in the analysis.
 - `requirements.txt`: Python libraries required to run the project.
 
 ## Key Steps
