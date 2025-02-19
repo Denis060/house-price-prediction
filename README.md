@@ -1,7 +1,7 @@
 # House Price Prediction Using Regression and Random Forest Models
 
 ## Project Overview
-This project aims to predict house prices using a variety of property features, such as square footage, number of bathrooms, bedrooms, and the year the house was built. Three different models—Linear Regression, Random Forest, and Decision Tree—were evaluated to determine which one best captures the factors influencing house prices.
+This project aims to predict house prices using a variety of property features, such as square footage, number of bathrooms, bedrooms, and the year the house was built. Three different models—Linear Regression, Random Forest, and Decision Trees were evaluated to determine which one best captures the factors influencing house prices.
 ## Files Included
 - `house_price_prediction.py`: The main script for data cleaning, analysis, and model training.
 - `data_assignment2.csv`: The dataset used in the analysis.
@@ -30,7 +30,7 @@ While Linear Regression showed the best results, the low R-squared across models
 To install the required dependencies, run:
 ```bash
 pip install -r requirements.txt
-Project By Ibrahim Denis Fofanah, MSc Data SCience- Pace University
+Project By Ibrahim Denis Fofanah, MSc Data Science- Pace University
 
 
 
