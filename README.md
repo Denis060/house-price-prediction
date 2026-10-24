@@ -1,37 +1,44 @@
-# House Price Prediction Using Regression and Random Forest Models
+# House Price Prediction — Regression Baselines
 
-## Project Overview
-This project aims to predict house prices using a variety of property features, such as square footage, number of bathrooms, bedrooms, and the year the house was built. Three different models—Linear Regression, Random Forest, and Decision Trees were evaluated to determine which one best captures the factors influencing house prices.
-## Files Included
-- `house_price_prediction.py`: The main script for data cleaning, analysis, and model training.
-- `data_assignment2.csv`: The dataset used in the analysis.
-- `requirements.txt`: Python libraries required to run the project.
+> A course project comparing Linear Regression, Random Forest and Decision Tree regressors for house prices, and diagnosing why all three explain very little variance.
 
-## Key Steps
-1. **Data Cleaning & Wrangling**: Handled missing values, data types, and standardized features.
-2. **Exploratory Data Analysis (EDA)**: Visualized key features and their relationships with house prices.
-3. **Feature Selection**: Identified important features such as `sqft_living`, `bedrooms`, `bathrooms`, and `sqft_above`.
-4. **Modeling**:
-   - Linear Regression
-   - Random Forest Regression
-   - Decision Tree Regression
+[![Python](https://img.shields.io/badge/Python-3-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-5. **Model Evaluation**: Assessed model performance using Mean Squared Error (MSE) and R-squared metrics to identify the most effective model.
-6. **Model Comparison and Results**:
-   After evaluating each model:
-   - Linear Regression had the highest R-squared value (3.05%) and the lowest MSE, indicating it performed best on this dataset.
-   - Random Forest performed slightly worse, with a lower R-squared and slightly higher MSE.
-   - Decision Tree had the poorest performance, with a negative R-squared value, suggesting it overfits and fails to generalize well.
-While Linear Regression showed the best results, the low R-squared across models suggests that additional features or advanced models might be needed for improved accuracy.
+## Overview & motivation
 
-## Getting Started
+Given property attributes (living area, bedrooms, bathrooms, above-ground area, year built), how well can standard models predict sale price? The project walks through cleaning, EDA, feature selection, modeling and evaluation.
 
-### Dependencies
-To install the required dependencies, run:
+## Approach & tech stack
+
+1. Cleaning & wrangling (missing values, types, scaling)
+2. EDA of key features vs. price
+3. Feature selection: `sqft_living`, `bedrooms`, `bathrooms`, `sqft_above`, …
+4. Models: Linear Regression, Random Forest, Decision Tree; evaluated with MSE and R²
+
+**Stack:** Python · pandas · scikit-learn · Matplotlib/Seaborn
+
+## Results
+
+| Model | R² (test) |
+|---|---:|
+| Linear Regression | ~0.03 |
+| Random Forest | ~0.02 |
+| Decision Tree | < 0 |
+
+All models explain only a few percent of price variance on this dataset; the Decision Tree overfits. The lesson: model choice matters far less than features — drivers available in the data but not used here (location/zip code, condition, view, waterfront) and outlier handling are the obvious next steps.
+
+## How to run
+
 ```bash
-pip install -r requirements.txt
-Project By Ibrahim Denis Fofanah, MSc Data Science- Pace University
+pip install pandas numpy scikit-learn matplotlib seaborn
+python house_price.py     # or open Assignment_2_Ibrahim_Denis_fofanah.ipynb
+```
+Data: `data_assignment2.csv` (semicolon-delimited).
 
+---
 
+## About the author
 
+**Ibrahim Denis Fofanah** — Data Scientist · ML / GenAI (RAG, agents) · BI & analytics · MS Data Science, Pace University (2025)
 
+[LinkedIn](https://www.linkedin.com/in/ibrahim-denis-fofanah/) · [Email](mailto:ibrahim.fofanah.ds@gmail.com) · [Live RAG portfolio project](https://moijey-copilot.vercel.app) · [GitHub](https://github.com/Denis060)
